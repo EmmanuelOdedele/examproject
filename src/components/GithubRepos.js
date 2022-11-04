@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Navigation from "./Navigation";
 import axios from "axios";
+import Pagination from "./Pagination";
+import MyRepos from "./MyRepos";
 
 function GithubRepos() {
   const [data, setData] = useState([]);
@@ -26,7 +28,6 @@ function GithubRepos() {
 
   console.log(data);
 
-
   return (
     <section>
       <Navigation />
@@ -41,17 +42,61 @@ function GithubRepos() {
       {isLoading ? (
         <p>Loading repositories</p>
       ) : (
-        <ul>
-          {data.map((repo) => (
-            <li key={repo.id}>
-              {repo.name}
-              <a href={repo.html_url} rel="noreferrer" target="_blank">Code</a>
-            </li>
-          ))}
-        </ul>
+        // <ul>
+        //   {data.map((repo) => (
+        //     <li key={repo.id}>
+        //       {repo.name}
+        //       <a href={repo.html_url} rel="noreferrer" target="_blank">
+        //         Code
+        //       </a>
+        //     </li>
+        //   ))}
+        // </ul>
+
+        <div>
+          {data.length > 0 ? (
+            <>
+              <Pagination
+                data={data}
+                RenderComponent={MyRepos}
+                pageLimit={3}
+                dataLimit={4}
+              />
+            </>
+          ) : (
+            <h1>No Repos to display</h1>
+          )}
+        </div>
       )}
     </section>
   );
 }
 
 export default GithubRepos;
+
+
+  /* <div>
+  {posts.length > 0 ? (
+    <>
+      <Pagination
+        data={data}
+        RenderComponent={MyRepos}
+        pageLimit={3}
+        dataLimit={4}
+      />
+    </>
+  ) : (
+    <h1>No Posts to display</h1>
+  )}
+</div> */
+
+
+
+  /* <ul>
+{data.map((repo) => (
+  <li key={repo.id}>
+    {repo.name}
+    <a href={repo.html_url} rel="noreferrer" target="_blank">Code</a>
+  </li>
+))}
+</ul> */
