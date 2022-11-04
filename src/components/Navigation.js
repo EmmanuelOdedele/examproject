@@ -8,7 +8,7 @@ function Navigation() {
       <img
         id="logo-image"
         alt="Emmanuel O."
-        src="https://drive.google.com/uc?export=view&id=1Jvj37aRgc-E3Cki14-9w47qYhA6kd-0x"
+        src="https://drive.google.com/uc?export=view&id=1JmY-H5gqcXDQzr3s7K2vHkVI6HxUG_DG"
       />
       <NavLink className="nav-items-container">
         <NavLink

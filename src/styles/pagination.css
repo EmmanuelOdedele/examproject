@@ -1,0 +1,16 @@
+#repos-displayed{
+    /* background-color: red; */
+}
+
+#pagination-container{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: brown; */
+}
+
+button{
+    display: flex;
+    border: none;
+    padding: 5px 10px;
+}

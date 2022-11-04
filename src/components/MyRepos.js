@@ -1,11 +1,11 @@
 import React from "react";
+import "../styles/myrepos.css"
 
 function MyRepos(props) {
   const { id, name, html_url, homepage } = props.data;
   return (
-    <div>
+    <div id="each-repo">
       <ul>
-        
         <li key={id}>
           {name}
           <div>

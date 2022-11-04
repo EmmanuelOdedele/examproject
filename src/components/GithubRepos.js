@@ -3,6 +3,7 @@ import Navigation from "./Navigation";
 import axios from "axios";
 import Pagination from "./Pagination";
 import MyRepos from "./MyRepos";
+import "../styles/repopage.css";
 
 function GithubRepos() {
   const [data, setData] = useState([]);
@@ -29,53 +30,54 @@ function GithubRepos() {
   console.log(data);
 
   return (
-    <section>
+    <div id="repopage-container">
       <Navigation />
-      <h1>My GitHub Repos</h1>
-      {hasError && (
-        <p>
-          Unable load repositories.
-          <br />
-          Error might be due to poor internet connection.
-        </p>
-      )}
-      {isLoading ? (
-        <p>Loading repositories</p>
-      ) : (
-        // <ul>
-        //   {data.map((repo) => (
-        //     <li key={repo.id}>
-        //       {repo.name}
-        //       <a href={repo.html_url} rel="noreferrer" target="_blank">
-        //         Code
-        //       </a>
-        //     </li>
-        //   ))}
-        // </ul>
+      <div id="repopage-content">
+        <h1>My GitHub Repos</h1>
+        {hasError && (
+          <p>
+            Unable load repositories.
+            <br />
+            Error might be due to poor internet connection.
+          </p>
+        )}
+        {isLoading ? (
+          <p>Loading repositories</p>
+        ) : (
+          // <ul>
+          //   {data.map((repo) => (
+          //     <li key={repo.id}>
+          //       {repo.name}
+          //       <a href={repo.html_url} rel="noreferrer" target="_blank">
+          //         Code
+          //       </a>
+          //     </li>
+          //   ))}
+          // </ul>
 
-        <div>
-          {data.length > 0 ? (
-            <>
-              <Pagination
-                data={data}
-                RenderComponent={MyRepos}
-                pageLimit={3}
-                dataLimit={4}
-              />
-            </>
-          ) : (
-            <h1>No Repos to display</h1>
-          )}
-        </div>
-      )}
-    </section>
+          <div>
+            {data.length > 0 ? (
+              <div id="repo-container">
+                <Pagination
+                  data={data}
+                  RenderComponent={MyRepos}
+                  pageLimit={3}
+                  dataLimit={4}
+                />
+              </div>
+            ) : (
+              <h1>No Repos to display</h1>
+            )}
+          </div>
+        )}
+      </div>
+    </div>
   );
 }
 
 export default GithubRepos;
 
-
-  /* <div>
+/* <div>
   {posts.length > 0 ? (
     <>
       <Pagination
@@ -90,9 +92,7 @@ export default GithubRepos;
   )}
 </div> */
 
-
-
-  /* <ul>
+/* <ul>
 {data.map((repo) => (
   <li key={repo.id}>
     {repo.name}

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styles/pagination.css";
 
 function Pagination({ data, RenderComponent, pageLimit, dataLimit }) {
   const [pages] = useState(Math.ceil(data.length / dataLimit));
@@ -34,13 +35,13 @@ function Pagination({ data, RenderComponent, pageLimit, dataLimit }) {
   return (
     <div>
       {/* To show the data */}
-      <div>
+      <div id="repos-displayed">
         {getPaginatedData().map((d, idx) => (
           <RenderComponent key={idx} data={d} />
         ))}
       </div>
 
-      <div>
+      <div id="pagination-container">
         {/* previous button */}
         <button disabled={currentPage === 1} onClick={goToPreviousPage}>
           prev
