@@ -36,6 +36,17 @@ function Navigation() {
         >
           PORTFOLIO
         </NavLink>
+        <NavLink
+          className="nav-item"
+          style={({ isActive }) =>
+            isActive
+              ? { color: "white", textDecoration: "none" }
+              : { color: "black", textDecoration: "none" }
+          }
+          to="/contactme"
+        >
+          CONTACT ME
+        </NavLink>
       </NavLink>
     </nav>
   );

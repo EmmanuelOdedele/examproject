@@ -4,6 +4,7 @@ import HomePage from "./components/HomePage";
 import GithubRepos from "./components/GithubRepos";
 import RepoInfo from "./components/RepoInfo";
 import NotFound from "./components/NotFound";
+import ContactMe from "./components/ContactMe";
 
 // Error Boundary below
 class ErrorBoundary extends React.Component {
@@ -41,6 +42,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/githubrepos" element={<GithubRepos />} />
           <Route path="/githubrepos/repoinfo" element={<RepoInfo />} />
+          <Route path="/contactme" element={<ContactMe/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </ErrorBoundary>
