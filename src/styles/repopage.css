@@ -38,3 +38,9 @@
     min-width:70%;
     width: 70%;
 }
+
+.isloading{
+  text-align: center;
+  font-size: 12px;
+  font-weight: 300;
+}

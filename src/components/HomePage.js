@@ -34,8 +34,8 @@ function HomePage() {
 
       <div id="homepage-content">
         <div id="avatar">
-          {hasError && <img alt="Avatar" />}
-          {isLoading ? <img alt="Avatar" /> : <GitHubAvatar data={data} />}
+          {hasError && <img alt="" />}
+          {isLoading ? <img alt="" /> : <GitHubAvatar data={data} />}
         </div>
         <p>Hello, my name is</p>
         <h1>EMMANUEL ODEDELE</h1>

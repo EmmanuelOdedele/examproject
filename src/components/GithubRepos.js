@@ -35,14 +35,14 @@ function GithubRepos() {
       <div id="repopage-content">
         <h1>My GitHub Repos</h1>
         {hasError && (
-          <p>
-            Unable load repositories.
+          <p className="isloading">
+            Unable to load repositories.
             <br />
             Error might be due to poor internet connection.
           </p>
         )}
         {isLoading ? (
-          <p>Loading repositories</p>
+          <p className="isloading">Loading repositories</p>
         ) : (
           // <ul>
           //   {data.map((repo) => (
@@ -66,7 +66,7 @@ function GithubRepos() {
                 />
               </div>
             ) : (
-              <h1>No Repos to display</h1>
+              <p className="isloading">No Repos to display</p>
             )}
           </div>
         )}
