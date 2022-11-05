@@ -45,7 +45,18 @@ function Navigation() {
           }
           to="/contactme"
         >
-          CONTACT ME
+          CONTACT-ME
+        </NavLink>
+        <NavLink
+          className="nav-item"
+          style={({ isActive }) =>
+            isActive
+              ? { color: "white", textDecoration: "none" }
+              : { color: "black", textDecoration: "none" }
+          }
+          to="/testerror"
+        >
+          TEST-ERROR
         </NavLink>
       </NavLink>
     </nav>

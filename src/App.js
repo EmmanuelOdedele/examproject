@@ -5,45 +5,19 @@ import GithubRepos from "./components/GithubRepos";
 import RepoInfo from "./components/RepoInfo";
 import NotFound from "./components/NotFound";
 import ContactMe from "./components/ContactMe";
-import { ErrorBoundary } from "./components/ErrorBoundary";
-
-// // Error Boundary below
-// class ErrorBoundary extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = { hasError: false };
-//   }
-
-//   static getDerivedStateFromError(error) {
-//     // Update state so the next render will show the fallback UI.
-//     return { hasError: true };
-//   }
-
-//   componentDidCatch(error, errorInfo) {
-//     // You can also log the error to an error reporting service
-//     // logErrorToMyService(error, errorInfo);
-//   }
-
-//   render() {
-//     if (this.state.hasError) {
-//       // You can render any custom fallback UI
-//       return <h1>Something went wrong.</h1>;
-//     }
-
-//     return this.props.children;
-//   }
-// }
-// // Error Boundary at the top
+import { ErrorBoundary } from "react-error-boundary";
+import TestError from "./components/TestError";
 
 function App() {
   return (
     <section>
-      <ErrorBoundary>
+      <ErrorBoundary >
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/githubrepos" element={<GithubRepos />} />
           <Route path="/githubrepos/repoinfo" element={<RepoInfo />} />
-          <Route path="/contactme" element={<ContactMe/>} />
+          <Route path="/contactme" element={<ContactMe />} />
+          <Route path="/testerror" element={<TestError />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </ErrorBoundary>
