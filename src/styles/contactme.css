@@ -93,7 +93,7 @@ textarea::placeholder {
   outline: none;
 }
 
-button {
+form button {
   box-sizing: border-box;
   margin-top: 10px;
   width: 100%;
@@ -104,6 +104,6 @@ button {
   margin-top: 20px;
 }
 
-button:hover {
+ form button:hover {
   background-color: rgb(54, 54, 54);
 }
