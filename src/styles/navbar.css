@@ -9,6 +9,9 @@ nav {
   align-items: center;
   background-color: rgb(68, 68, 68);
   color: rgb(255, 236, 212);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
 }
 
 .nav-items-container{
