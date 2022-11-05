@@ -5,10 +5,12 @@ import Pagination from "./Pagination";
 import MyRepos from "./MyRepos";
 import "../styles/repopage.css";
 
+
 function GithubRepos() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [hasError, setHasError] = useState(false);
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -44,17 +46,6 @@ function GithubRepos() {
         {isLoading ? (
           <p className="isloading">Loading repositories</p>
         ) : (
-          // <ul>
-          //   {data.map((repo) => (
-          //     <li key={repo.id}>
-          //       {repo.name}
-          //       <a href={repo.html_url} rel="noreferrer" target="_blank">
-          //         Code
-          //       </a>
-          //     </li>
-          //   ))}
-          // </ul>
-
           <div id="repo-main-container">
             {data.length > 0 ? (
               <div id="repo-container">
@@ -76,27 +67,3 @@ function GithubRepos() {
 }
 
 export default GithubRepos;
-
-/* <div>
-  {posts.length > 0 ? (
-    <>
-      <Pagination
-        data={data}
-        RenderComponent={MyRepos}
-        pageLimit={3}
-        dataLimit={4}
-      />
-    </>
-  ) : (
-    <h1>No Posts to display</h1>
-  )}
-</div> */
-
-/* <ul>
-{data.map((repo) => (
-  <li key={repo.id}>
-    {repo.name}
-    <a href={repo.html_url} rel="noreferrer" target="_blank">Code</a>
-  </li>
-))}
-</ul> */

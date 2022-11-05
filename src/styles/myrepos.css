@@ -1,5 +1,15 @@
 #each-repo {
   font-size: 12px;
   font-weight: 300;
+  text-decoration: none;
+  color: rgb(68, 68, 68);
   /* background-color: forestgreen; */
+}
+
+
+.view-more{
+  margin-left: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  color: rgb(68, 68, 68);
 }

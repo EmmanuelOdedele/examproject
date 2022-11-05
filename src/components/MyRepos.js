@@ -1,5 +1,6 @@
 import React from "react";
-import "../styles/myrepos.css"
+import "../styles/myrepos.css";
+import { NavLink } from "react-router-dom";
 
 function MyRepos(props) {
   // eslint-disable-next-line
@@ -8,7 +9,10 @@ function MyRepos(props) {
     <div id="each-repo">
       <ul>
         <li key={id}>
-          {name}
+            {name}
+          <NavLink className="view-more" to="/githubrepos/repoinfo">
+            &#9094;
+          </NavLink>
           {/* <div>
             <a href={html_url} rel="noreferrer" target="_blank">
               Code
@@ -29,3 +33,12 @@ function MyRepos(props) {
 }
 
 export default MyRepos;
+
+/* <ul>
+{data.map((repo) => (
+  <li key={repo.id}>
+    {repo.name}
+    <a href={repo.html_url} rel="noreferrer" target="_blank">Code</a>
+  </li>
+))}
+</ul> */
