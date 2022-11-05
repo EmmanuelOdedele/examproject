@@ -55,7 +55,7 @@ function GithubRepos() {
           //   ))}
           // </ul>
 
-          <div>
+          <div id="repo-main-container">
             {data.length > 0 ? (
               <div id="repo-container">
                 <Pagination

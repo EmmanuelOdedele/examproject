@@ -1,16 +1,34 @@
-#repos-displayed{
-    /* background-color: red; */
+#repo-pag-cont {
+  background-color: bisque;
+  padding: 10px 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#pagination-container{
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    /* background-color: brown; */
+#repos-displayed {
+  /* background-color: red; */
+  width: 100%;
 }
 
-button{
-    display: flex;
-    border: none;
-    padding: 5px 10px;
+#pagination-container {
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+  margin-top: 40px;
+  /* background-color: brown; */
+}
+
+button {
+  display: flex;
+  box-sizing: border-box;
+  border: none;
+  padding: 5px 10px;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 300;
+  color: rgb(68, 68, 68);
 }

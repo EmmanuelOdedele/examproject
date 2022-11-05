@@ -33,7 +33,7 @@ function Pagination({ data, RenderComponent, pageLimit, dataLimit }) {
   };
 
   return (
-    <div>
+    <div id="repo-pag-cont">
       {/* To show the data */}
       <div id="repos-displayed">
         {getPaginatedData().map((d, idx) => (
@@ -44,7 +44,7 @@ function Pagination({ data, RenderComponent, pageLimit, dataLimit }) {
       <div id="pagination-container">
         {/* previous button */}
         <button disabled={currentPage === 1} onClick={goToPreviousPage}>
-          prev
+        &#65124;
         </button>
 
         {/* show page numbers */}
@@ -59,8 +59,9 @@ function Pagination({ data, RenderComponent, pageLimit, dataLimit }) {
 
         {/* next button */}
         <button disabled={currentPage === pages} onClick={goToNextPage}>
-          next
+        &#65125;
         </button>
+
       </div>
     </div>
   );
