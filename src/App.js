@@ -7,11 +7,18 @@ import NotFound from "./components/NotFound";
 import ContactMe from "./components/ContactMe";
 import { ErrorBoundary } from "react-error-boundary";
 import TestError from "./components/TestError";
+import FallBack from "./components/FallBack";
+
 
 function App() {
+
+const errorHandler = (error, errorInfo) => {
+  console.log("Logging", error, errorInfo)
+}
+ 
   return (
     <section>
-      <ErrorBoundary >
+      <ErrorBoundary FallbackComponent={FallBack} onError={errorHandler}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/githubrepos" element={<GithubRepos />} />

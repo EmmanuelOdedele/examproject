@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import Navigation from "./Navigation";
+import { useErrorHandler } from "react-error-boundary";
 import "../styles/testerror.css";
 
 const MAX_COUNT_ALLOWED = 5;
 
 function TestError() {
   const [count, setCount] = useState(0);
+  const handleError = useErrorHandler();
 
   const handleClick = () => {
     try {
@@ -15,7 +17,7 @@ function TestError() {
         setCount((prev) => (prev = count + 1));
       }
     } catch (error) {
-      console.log("Click Counter Error", error);
+      handleError(error)
     }
   };
 
