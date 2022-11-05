@@ -9,22 +9,22 @@ function MyRepos(props) {
     <div id="each-repo">
       <ul>
         <li key={id}>
-            {name}
+          {name}
           <NavLink className="view-more" to="/githubrepos/repoinfo">
             &#9094;
           </NavLink>
-          {/* <div>
-            <a href={html_url} rel="noreferrer" target="_blank">
+          <div id="codensite-container">
+            <a className="codensite" id="code" href={html_url} rel="noreferrer" target="_blank">
               Code
             </a>
             {homepage !== null ? (
-              <a href={`https://${homepage}`} rel="noreferrer" target="_blank">
+              <a className="codensite" href={`https://${homepage}`} rel="noreferrer" target="_blank">
                 Site
               </a>
             ) : (
               <div></div>
             )}
-          </div> */}
+          </div>
         </li>
         {/* ))} */}
       </ul>
