@@ -5,11 +5,13 @@ import "../styles/navbar.css";
 function Navigation() {
   return (
     <nav>
-      <img
-        id="logo-image"
-        alt="Emmanuel O."
-        src="https://drive.google.com/uc?export=view&id=1JmY-H5gqcXDQzr3s7K2vHkVI6HxUG_DG"
-      />
+      <NavLink to="/">
+        <img
+          id="logo-image"
+          alt="Emmanuel O."
+          src="https://drive.google.com/uc?export=view&id=1JmY-H5gqcXDQzr3s7K2vHkVI6HxUG_DG"
+        />
+      </NavLink>
       <NavLink className="nav-items-container">
         <NavLink
           className="nav-item"
