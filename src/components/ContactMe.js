@@ -1,10 +1,20 @@
 import React from "react";
 import "../styles/contactme.css";
 import Navigation from "./Navigation";
+import { Helmet } from "react-helmet-async";
 
 function ContactMe() {
   return (
     <div id="contactme-container">
+      <Helmet>
+        <title>Emmanuel Odedele - Contact-Me</title>
+        <meta
+          name="description"
+          content="Would you like to contact Emmanuel Odedele? Use this page."
+        />
+        <link rel="canonical" href="/contactme" />
+      </Helmet>
+
       <Navigation />
       <div id="contactme-content">
         <h1>Contact Me</h1>

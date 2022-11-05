@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/avatar.css"
+import "../styles/avatar.css";
 
 function GitHubAvatar(props) {
   const { avatar_url } = props.data;

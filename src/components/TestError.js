@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navigation from "./Navigation";
 import { useErrorHandler } from "react-error-boundary";
 import "../styles/testerror.css";
+import { Helmet } from "react-helmet-async";
 
 const MAX_COUNT_ALLOWED = 5;
 
@@ -23,6 +24,16 @@ function TestError() {
 
   return (
     <div id="test-container">
+
+      <Helmet>
+        <title>Emmanuel Odedele - Test-Error</title>
+        <meta
+          name="description"
+          content="Error boundary is implemented in this Web App. Check it out."
+        />
+        <link rel="canonical" href="/testerror" />
+      </Helmet>
+
       <Navigation />
       <div id="test-content">
         <h1>Test the Error Boundary</h1>

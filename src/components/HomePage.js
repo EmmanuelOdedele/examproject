@@ -3,6 +3,7 @@ import axios from "axios";
 import Navigation from "./Navigation";
 import "../styles/homepage.css";
 import GitHubAvatar from "./GitHubAvatar";
+import { Helmet } from "react-helmet-async";
 
 function HomePage() {
   const [data, setData] = useState([]);
@@ -30,6 +31,15 @@ function HomePage() {
 
   return (
     <div id="homepage-container">
+      <Helmet>
+        <title>Emmanuel Odedele</title>
+        <meta
+          name="description"
+          content="Emmanuel Odedele - A world-class Designer/Developer"
+        />
+        <link rel="canonical" href="/" />
+      </Helmet>
+
       <Navigation />
 
       <div id="homepage-content">

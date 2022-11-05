@@ -4,13 +4,12 @@ import axios from "axios";
 import Pagination from "./Pagination";
 import MyRepos from "./MyRepos";
 import "../styles/repopage.css";
-
+import { Helmet } from "react-helmet-async";
 
 function GithubRepos() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [hasError, setHasError] = useState(false);
-
 
   useEffect(() => {
     const fetchData = async () => {
@@ -33,6 +32,15 @@ function GithubRepos() {
 
   return (
     <div id="repopage-container">
+      <Helmet>
+        <title>Emmanuel Odedele - Portfolio</title>
+        <meta
+          name="description"
+          content="See a list of projects that has been done by Emmanuel Odedele."
+        />
+        <link rel="canonical" href="/githubrepos" />
+      </Helmet>
+
       <Navigation />
       <div id="repopage-content">
         <h1>My GitHub Repos</h1>
