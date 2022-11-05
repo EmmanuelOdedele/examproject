@@ -17,7 +17,7 @@ function TestError() {
         setCount((prev) => (prev = count + 1));
       }
     } catch (error) {
-      handleError(error)
+      handleError(error);
     }
   };
 
@@ -27,7 +27,8 @@ function TestError() {
       <div id="test-content">
         <h1>Test the Error Boundary</h1>
         <div id="counter-container">
-          <h1>Counter</h1>
+          <h1 id="innerh1">Counter</h1>
+          <p>Count above 5 to see error.</p>
           <input value={count} id="counter" readOnly />
           <button onClick={handleClick} id="counter-btn">
             Click

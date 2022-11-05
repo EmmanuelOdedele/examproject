@@ -17,8 +17,8 @@ function Navigation() {
           className="nav-item"
           style={({ isActive }) =>
             isActive
-              ? { color: "white", textDecoration: "none" }
-              : { color: "black", textDecoration: "none" }
+              ? { color: "white", textDecoration: "underline" }
+              : { color: "white", textDecoration: "none" }
           }
           to="/"
           end
@@ -29,8 +29,8 @@ function Navigation() {
           className="nav-item"
           style={({ isActive }) =>
             isActive
-              ? { color: "white", textDecoration: "none" }
-              : { color: "black", textDecoration: "none" }
+              ? { color: "white", textDecoration: "underline" }
+              : { color: "white", textDecoration: "none" }
           }
           to="/githubrepos"
         >
@@ -40,8 +40,8 @@ function Navigation() {
           className="nav-item"
           style={({ isActive }) =>
             isActive
-              ? { color: "white", textDecoration: "none" }
-              : { color: "black", textDecoration: "none" }
+              ? { color: "white", textDecoration: "underline" }
+              : { color: "white", textDecoration: "none" }
           }
           to="/contactme"
         >
@@ -51,8 +51,8 @@ function Navigation() {
           className="nav-item"
           style={({ isActive }) =>
             isActive
-              ? { color: "white", textDecoration: "none" }
-              : { color: "black", textDecoration: "none" }
+              ? { color: "white", textDecoration: "underline" }
+              : { color: "white", textDecoration: "none" }
           }
           to="/testerror"
         >

@@ -57,7 +57,7 @@ function GithubRepos() {
                 />
               </div>
             ) : (
-              <p className="isloading">No Repos to display</p>
+              <p className="isloading">No Repos to display.</p>
             )}
           </div>
         )}
