@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import "../styles/pagination.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+const next = <FontAwesomeIcon icon="fa-thin fa-angle-right" />
+// const prev = 
 
 function Pagination({ data, RenderComponent, pageLimit, dataLimit }) {
   const [pages] = useState(Math.ceil(data.length / dataLimit));
@@ -59,7 +63,7 @@ function Pagination({ data, RenderComponent, pageLimit, dataLimit }) {
 
         {/* next button */}
         <button disabled={currentPage === pages} onClick={goToNextPage}>
-        &#65125;
+        &#65125; {next}
         </button>
 
       </div>

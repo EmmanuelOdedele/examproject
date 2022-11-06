@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import "../styles/navbar.css";
 
 function Navigation() {
+
   return (
     <nav>
       <NavLink to="/">
@@ -59,6 +60,10 @@ function Navigation() {
           TEST-ERROR
         </NavLink>
       </NavLink>
+      {/* <div id="mobile">
+        <div id="bar">&#8801;</div>
+        <div>&#215;</div>
+      </div> */}
     </nav>
   );
 }
