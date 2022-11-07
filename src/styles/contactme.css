@@ -44,7 +44,7 @@ form {
 }
 
 .info-wrapper label {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 300;
   color: rgb(68, 68, 68);
 }
@@ -52,7 +52,7 @@ form {
 .info-wrapper input {
   box-sizing: border-box;
   width: 100%;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 300;
   margin-bottom: 3px;
   border: 1px solid rgb(68, 68, 68, 0.5);
@@ -63,7 +63,7 @@ form {
 }
 
 input::placeholder {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 300;
   color: rgb(68, 68, 68, 0.3);
 }
@@ -78,13 +78,13 @@ input::placeholder {
   height: 70px;
   min-height: 70px;
   max-height: 100px;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 300;
   padding: 3px 5px;
 }
 
 textarea::placeholder {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 300;
   color: rgb(68, 68, 68, 0.3);
 }
@@ -100,7 +100,7 @@ form button {
   width: 100%;
   background-color: rgb(68, 68, 68);
   color: rgb(235, 235, 235);
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 300;
   margin-top: 20px;
 }
