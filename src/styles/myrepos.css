@@ -1,6 +1,6 @@
 #each-repo {
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   text-decoration: none;
   margin-bottom: -5px;
   color: rgb(68, 68, 68);
@@ -23,7 +23,7 @@
 .codensite{
   color: rgb(68, 68, 68);
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   text-decoration: none;
 }
 
