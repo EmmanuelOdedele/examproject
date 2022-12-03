@@ -10,7 +10,7 @@ export class ErrorBoundary extends Component {
 
     static getDerivedStateFromError(error) {
         return {
-            hasErrpor: true,
+            hasError: true,
         }
     }
 

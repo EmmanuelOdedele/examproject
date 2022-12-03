@@ -1,13 +1,34 @@
 import {useEffect, useState, createContext} from React;
-import RepoInfo from "./RepoInfo";
 
-const Context = createContext()
+const GithubContext = createContext()
 
-function GithubContext() {
+function GithubContext({children}) {
+    const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [hasError, setHasError] = useState(false);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setIsLoading(true);
+      setHasError(false);
+      try {
+        const results = await axios(
+          "https://api.github.com/users/EmmanuelOdedele/repos"
+        );
+        setData(results.data);
+      } catch (error) {
+        setHasError(true);
+      }
+      setIsLoading(false);
+    };
+    fetchData();
+  }, []);
+
+
     return (
-        <Context.Provider>
-<RepoInfo/>
-        </Context.Provider>
+        <GithubContext.Provider value={data}>
+            {children}
+        </GithubContext.Provider>
     )
 }
 
